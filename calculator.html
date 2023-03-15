@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" name="calculator" class="calculator">
+            <input type="text" class="user-input" value="" name="text" readonly>
+            <span class="num clear" onclick="calculator.text.value = ''">C</span>
+            <span class="num operation" onclick="document.calculator.text.value+='/'">/</span>
+            <span class="num operation" onclick="document.calculator.text.value+='*'">x</span>
+            <span class="num number" onclick="document.calculator.text.value+='7'">7</span>
+            <span class="num number" onclick="document.calculator.text.value+='8'">8</span>
+            <span class="num number" onclick="document.calculator.text.value+='9'">9</span>
+            <span class="num operation" onclick="document.calculator.text.value+='-'">-</span>
+            <span class="num number" onclick="document.calculator.text.value+='4'">4</span>
+            <span class="num number" onclick="document.calculator.text.value+='5'">5</span>
+            <span class="num number" onclick="document.calculator.text.value+='6'">6</span>
+            <span class="num plus operation" onclick="document.calculator.text.value+='+'">+</span>
+            <span class="num number" onclick="document.calculator.text.value+='1'">1</span>
+            <span class="num number" onclick="document.calculator.text.value+='2'">2</span>
+            <span class="num number" onclick="document.calculator.text.value+='3'">3</span>
+            <span class="num number" onclick="document.calculator.text.value+='0'">0</span>
+            <span class="num number two-zero" onclick="document.calculator.text.value+='00'">00</span>
+            <span class="num point" onclick="document.calculator.text.value+='.'">.</span>
+            <span class="num equal operation" onclick="document.calculator.text.value = eval(calculator.text.value)">=</span>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="animation.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 25,
+            speed: 500,
+            // glare:false,
+            // "max-glare":0.2
+        });
+    </script>
+    <script src="calculator.js"></script>
+</body>
+
+</html>
